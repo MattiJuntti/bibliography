@@ -1,0 +1,781 @@
+% File: bibliography.bib
+% Author: Matti Juntti, matti.juntti@student.oulu.fi
+%
+% Table of sections:
+%    1. AI, ML and DL science & engineering
+%       a. articles:
+%           chellapilla06, kukkaro26, telgarsky15
+%       b. books:
+%           alammar24, albada25, raschka24
+%       c. inproceedings:
+%           zhou21
+%       d. misc:
+%           dosovitskiy21, khan19
+%
+%    2. Climate change + disinformation
+%       a. articles:
+%           essien25, hulme18, stede23, tomassi25
+%
+%    3. Custom LLMs
+%       a. articles:
+%           singhal25
+%       b. misc:
+%           wu23
+%
+%    4. Data science
+%       a. books:
+%           mariani22
+%
+%    5. Design science and design science research
+%       a. books:
+%           johannesson14
+%
+%    6. Digital image processing
+%       a. articles:
+%           duda72
+%
+%    7. GPU programming
+%       a. articles:
+%           kruger03
+%
+%    8. High-performance and parallel computing
+%       a. books:
+%           barlas15, panda22
+%
+%    9. Interaction design
+%       a. articles:
+%           upton08
+%
+%   10. Knee articular cartilage segmentation
+%       a. articles:
+%           deniz18
+% 
+%   11. LLM heuristics
+%
+%   12. Literature review methods
+%       a. articles:
+%           torraco05, torraco16, snyder19
+%
+%   13. Popular LLM architectures and LLMing
+%       a. articles:
+%           ouyang22, vaswani17
+%       b. inproceedings
+%           cao22
+%       c. misc
+%           bi24, rafailov24
+%
+%   14. Radiomics
+%       articles:
+%           lambin12
+%
+%   15. Software and systems engineering
+%       articles:
+%           petersen08
+%       books:
+%           bass22, borky19, dick17, lauesen05, lattanze09, wiegers13
+%
+%   16. Text mining
+%       articles:
+%           abdullah23, aggarwal12a, hassani20, kobayashi18, myllyla25
+%       incollections:
+%           aggarwal12, jiang12 nenkova12
+%
+
+% 1. AI, ML and DL science & engineering -------------------------
+
+@article {
+    kukkaro26,
+    title     = {A Systematic mapping of federated learning operations and features: Architecture, communication and aggregation models},
+    author    = {Kukkaro, A. and Moreschini, S. and Taibi, D. and H{\"a}stbacka, D.},
+    journal   = {Journal of Systems and Software},
+    pages     = {112863},
+    year      = {2026},
+    publisher = {Elsevier}
+}
+
+@book {
+    alammar24,
+    author       = {Alammar, J. and Grootendorst, M.},
+    title        = {Hands-on large language models},
+    publisher    = {{O'Reilly}},
+    year         = {2025}
+}
+
+@book {
+    albada25,
+    author       = {Albada, M.},
+    title        = {{Building applications with AI agents}},
+    publisher    = {{O'Reilly}},
+    year         = {2025}
+}
+
+% Introduces a method for computing convolution operations as
+% simple and proper matrix multplication by "unrolling
+% convolutions" instead of the more canonical O(n^4) type
+% algorithm. Has clear and terse explanation of both forward and
+% backward passes of training a CNN and good diagram illustrating
+% the logic of "unrolling convolutions" into a proper matrix
+% product. Achieves computing performance via three methods 1)
+% using the unrolling, 2) BLAS and 3) GPUs.
+@inproceedings {
+    chellapilla06,
+    author    = {Chellapilla, K. and Puri, S. and Simard, P.},
+    title     = {High Performance Convolutional Neural Networks for Document Processing},
+    booktitle = {Tenth International Workshop on Frontiers in Handwriting Recognition},
+    year      = {2006},
+    month     = {10},
+    address   = {{La Baule, France}},
+    publisher = {{Universit{\'e} de Rennes 1}}
+}
+
+% First paragraph contains baseline and simplified explanation on
+% how mathematically think about neural networks.
+@article {
+    telgarsky15,
+    title   = {Representation benefits of deep feedforward networks},
+    author  = {Telgarsky, M.},
+    journal = {{arXiv preprint arXiv:1509.08101}},
+    year    = {2015}
+}
+
+% [[ Unread ]]
+@book {
+    raschka24,
+    title     = {Build a large language model (from scratch)},
+    author    = {Raschka, S.},
+    year      = {2024},
+    publisher = {{Simon and Schuster}}
+}
+
+% Overview on the "im2col" algorithm, i.e., how to explaing
+% convolution just as a basic generic matrix multiplication.
+@inproceedings {
+    zhou21,
+    title        = {Characterizing and demystifying the implicit convolution algorithm on commercial matrix-multiplication accelerators},
+    author       = {Zhou, Y. and Yang, M. and Guo, C. and Leng, J. and Liang, Y. and Chen, Q. and Guo, M. and Zhu, Y.},
+    booktitle    = {2021 IEEE International Symposium on Workload Characterization (IISWC)},
+    pages        = {214--225},
+    year         = {2021},
+    organization = {IEEE}
+}
+
+% Proposes image recognition neural network architecture based on
+% the Transformer architecture, the Visual Transformer, explains
+% the methods and related variants plus results. One major idea in
+% the Visual Transformer is to partition image into fixed-size
+% "image patches"/partitions, convert partitions into n x m x c
+% vectors, compute embeddings and transfer these vectors into
+% Transformer encoder-block.
+%
+% Tags: Transformer, Visual Transformer,
+@misc {
+    dosovitskiy21,
+    title         = {{An image is worth 16x16 words: Transformers for image recognition at scale}},
+    author        = {Dosovitskiy, A. and Beyer, L. and Kolesnikov, A. and Weissenborn, D. and Zhai, X. and Unterthiner, T. and Dehghani, M. and Minderer, M. and Heigold, G. and Gelly, S. and Uszkoreit, J. and Houlsby, N.},
+    year          = {2021},
+    eprint        = {2010.11929},
+    archivePrefix = {{arXiv}},
+    primaryClass  = {{cs.CL}},
+    url           = {https://arxiv.org/abs/2010.11929}
+}
+
+% Synopsis: Overview on MIOpen library primitives for deep
+% learning. Also contains useful insights into how common deep
+% learning frameworks make use of mathematics and computer science
+% when implementing deep learning primitive operations like
+% convolution etc.
+%
+% Tags: Circulant matrix
+%
+@misc {
+    khan19,
+    title         = {{MIOpen: An open source library for deep learning primitives}},
+    author        = {Khan, J. and Fultz, P. and Tamazov, A. and Lowell, D. and Liu, C. and Melesse, M. and Nandhimandalam, M. and Nasyrov, K. and Perminov, I. and Shah, T. and Filippov, V. and Zhang, J. and Zhou, J. and Natarajan, B. and Daga, M.},
+    year          = {2019},
+    eprint        = {1910.00078},
+    archivePrefix = {arXiv},
+    primaryClass  = {cs.LG},
+    url           = {https://arxiv.org/abs/1910.00078},
+}
+
+% 2. Climate change ----------------------------------------------
+
+% Results of meta-synthesis on climate change disinfo on social media
+%
+% Synopsis: Text with interesting viewpoints on climage change via
+% interpretation of "meta-synthesis" results. Displays good
+% methodological framework in Fig. 1 and the PRISMA framework in
+% Fig. 2. Has a nice multipage table of studies studied.
+@article {
+    essien25,
+    title     = {{Climate change disinformation on social media: A meta-synthesis on epistemic welfare in the post-truth era}},
+    author    = {Essien, E. O.},
+    journal   = {Social sciences},
+    volume    = {14},
+    number    = {5},
+    pages     = {304},
+    year      = {2025},
+    publisher = {{MDPI}}
+}
+
+% [[ Unread ]]
+@article {
+    hulme18,
+    title     = {Framing the challenge of climate change in {Nature} and {Science} editorials},
+    author    = {Hulme, M. and Obermeister, N. and Randalls, S. and Borie, M.},
+    journal   = {Nature climate change},
+    volume    = {8},
+    number    = {6},
+    pages     = {515--521},
+    year      = {2018},
+    publisher = {Nature Publishing Group {UK London}}
+}
+
+% [[ At page 499 (15) ]]
+@article {
+    stede23,
+    title     = {Framing climate change in {Nature} and {Science} editorials: applications of supervised and unsupervised text categorization},
+    author    = {Stede, M. and Bracke, Y. and Borec, L. and Kinkel, N. C. and Skeppstedt, M.},
+    journal   = {Journal of Computational Social Science},
+    volume    = {6},
+    number    = {2},
+    pages     = {485--513},
+    year      = {2023},
+    publisher = {Springer}
+}
+
+
+% Literature review on disinformation with general overview on the
+% disinformation regarding climate change mis- and disinformation with
+% comprehensive overview into the litarature. Categorizes relevant literature
+% publications into manually defined categories found via manual interpretative
+% approach. Calls out for mis-/disinformation counter-measure tools and work.
+%
+% Tags: climate change, misinformation, disinformation, inoculation theory
+%
+@article {
+    tomassi25,
+    title     = {{Disinformation in the digital age: Climate change, media dynamics, and strategies for resilience}},
+    author    = {Tomassi, A. and Falegnami, A. and Romano, E.},
+    journal   = {Publications},
+    volume    = {13},
+    number    = {2},
+    pages     = {24},
+    year      = {2025},
+    publisher = {{MDPI}}
+}
+
+% 3. Custom LLMs -------------------------------------------------
+
+% [[ Unread ]]
+@article {
+    singhal25,
+    title     = {Toward expert-level medical question answering with large language models},
+    author    = {Singhal, K. and Tu, T. and Gottweis, J. and Sayres, R. and Wulczyn, E. and Amin, M. and Hou, L. and Clark, K. and Pfohl, S. R. and Cole-Lewis, H. and Neal, D. and Rashid, Q. M. and Schaekermann, M. and Wang, A. and Dash, D. and Chen, J. H. and Shah, N. H. and Lachgar, S. and Mansfield, P. A. and Prakash, S. and Green, B. and Dominowska, E. and Agüera y Arcas, B. and Tomašev, N. and Liu, Y. and Wong, R. and Semturs, C. and Mahdavi, S. S. and Barral, J. K. and Webster, D. R. and Corrado, G. S. and Matias, Y. and Azizi, S. and Karthikesalingam, A. and Natarajan, V.},
+    journal   = {Nature medicine},
+    volume    = {31},
+    number    = {3},
+    pages     = {943--950},
+    year      = {2025},
+    publisher = {{Nature Publishing Group US New York}}
+}
+
+% [[ Unread ]]
+@misc {
+    wu23,
+    title         = {{BloombergGPT: A Large Language Model for Finance}},
+    author        = {Wu, S. and Irsoy, O. and Lu, S. and Dabravolski, V. and Dredze, M. and Gehrmann, S. and Kambadur, P. and Rosenberg, D. and Mann, G.},
+    year          = {2023},
+    eprint        = {2303.17564},
+    archivePrefix = {{arXiv}},
+    primaryClass  = {cs.LG},
+    url           = {https://arxiv.org/abs/2303.17564}
+}
+
+% 4. Data science ---------------------------------------------------
+
+@book {
+    mariani22,
+    author       = {Mariani, M. C. and Tweneboah, O. K. and Beccar-Varela, M. P.},
+    title        = {Data science in theory and practice},
+    publisher    = {Wiley},
+    year         = {2022}
+}
+
+% 5. Design science and design science research----------------------
+
+@book {
+    johannesson14,
+    author       = {Johannesson, P. and Perjons, E.},
+    title        = {An introduction to design science},
+    publisher    = {Springer},
+    year         = {2015}
+}
+
+% 6. Digital image processing ---------------------------------------
+
+% Hough transform
+%
+% Synopsis: Explains details of the Hough transformation via theory
+% and an example using sinusoidal curve interpretation of a line in
+% picture (or sample) space at the _parameter space_ (i.e. theta-rho
+% space).
+%
+% tags: Hough transformation, parameter space, theta-rho space, edge detection
+@article {
+    duda72,
+    title        = {{Use of the Hough transformation to detect lines and curves in pictures}},
+    author       = {{Duda, R. O. and Hart, P. E.}},
+    journal      = {{Communications of the ACM}},
+    volume       = {{15}},
+    number       = {{1}},
+    pages        = {{11--15}},
+    year         = {1972},
+    publisher    = {{ACM New York, NY, USA}}
+}
+
+% 7. GPU programming ---------------------------------------------
+
+% Overview from 2003 for using GPUs to do numerical linear algebra
+% that discusses the topic in a very wholesome manner, such as
+% in terms of basic linear algebra operations.
+%
+% tags: numerical linear algebra
+@article {
+    kruger05,
+    author       = {{Kr{\"u}ger, J. and Westermann, R.}},
+    title        = {{Linear algebra operators for GPU implementation of numerical algorithms}},
+    journal	     = {{ACM transactions of graphics}},
+    volume 	     = {{22}},  % Optional
+    number 	     = {{3}},  % Optional
+    pages  	     = {{234-242}},  % Optional
+    year   	     = {2003}
+}
+
+% 8. High-performance and parallel computing ---------------------
+
+@book {
+    barlas15,
+    author       = {Barlas, G.},
+    title        = {Multicore and GPU programming},
+    publisher    = {Elsevier},
+    year         = {2015}
+}
+
+@book {
+    panda22,
+    title     = {High-performance big data computing},
+    author    = {Panda, D. K. and Lu, X. and Shankar, D.},
+    year      = {2022},
+    publisher = {{MIT Press}}
+}
+
+% 9. Interaction design ------------------------------------------
+
+% Tags: ecological interdace design, EID, information requirements, abstraction decomposition space
+%
+% Overview on visual design methodology for guiding design process,
+% suggesting that the purpose of a design methodology should
+% decompose some design problem into a number of theoretically
+% sound activities that on completion help to produce appropriate
+% design solution. Illustrates nice figure for displaying
+% correlation matrix-style info on tool per metric style. Has nice
+% example on information requirements of a system.
+@article {
+    upton08,
+    title     = {Extending ecological interface design principles: a manufacturing case study},
+    author    = {Upton, C. and Doherty, G.},
+    journal   = {International journal of Human-computer studies},
+    volume    = {66},
+    number    = {4},
+    pages     = {271--286},
+    year      = {2008},
+    publisher = {Elsevier}
+}
+
+% 10. Knee articular cartilage segmentation -----------------------
+%
+% Tags: U-Net, 2-D CNN, 3-D CNN, DSC, recall, specificity, precision, ASD, MSD
+% Study on application of U-Net to automatic knee cartilage
+% segmentation, where researchers tested multiple different
+% variants of U-Nets and found out that a 3-D CNN U-Net with 4
+% layers and 32 features yielded best results. Manual segmentation
+% was used as a ground truth. Comprehensive bibliography. Lists
+% commong evaluation scores.
+@article {
+    deniz18,
+    title     = {Segmentation of the proximal femur from MR images using deep convolutional neural networks},
+    author    = {Deniz, C. M. and Xiang, S. and Hallyburton, R. S. and Welbeck, A. and Babb, J. S. and Honig, S. and Cho, K. and Chang, G.},
+    journal   = {Scientific reports},
+    volume    = {8},
+    number    = {1},
+    pages     = {16485},
+    year      = {2018},
+    publisher = {{Nature Publishing Group UK London}}
+}
+
+
+% 11. LLM Heuristics ---------------------------------------------
+
+@misc {
+    raschka20,
+    title         = {Model evaluation, model selection, and algorithm selection in machine learning},
+    author        = {Raschka, S.},
+    year          = {2020},
+    eprint        = {1811.12808},
+    archivePrefix = {{arXiv}},
+    primaryClass  = {{cs.LG}},
+    url           = {https://arxiv.org/abs/1811.12808}
+}
+
+% 12. Literature review methods -----------------------------------
+
+% [[ Read ]]
+@article {
+    snyder19,
+    title     = {Literature review as a research methodology: {An} overview and guidelines},
+    author    = {Snyder, H.},
+    journal   = {Journal of business research},
+    volume    = {104},
+    pages     = {333--339},
+    year      = {2019},
+    publisher = {Elsevier}
+}
+
+% [[ Read ]]
+@article {
+    torraco05,
+    title     = {Writing integrative literature reviews: Guidelines and examples},
+    author    = {Torraco, R. J.},
+    journal   = {Human resource development review},
+    volume    = {4},
+    number    = {3},
+    pages     = {356--367},
+    year      = {2005},
+    publisher = {{Sage Publications Sage CA: Thousand Oaks, CA}}
+}
+
+% [[ Read ]]
+@article {
+    torraco16,
+    title     = {Writing integrative literature reviews: {Using} the past and present to explore the future},
+    author    = {Torraco, R. J.},
+    journal   = {Human resource development review},
+    volume    = {15},
+    number    = {4},
+    pages     = {404--428},
+    year      = {2016},
+    publisher = {{Sage Publications Sage CA: Los Angeles, CA}}
+}
+
+% 13. Popular LLM architectures and LLMing ------------------------
+
+% [[ Unread ]]
+% Supervised finetuning
+% tags: SFT, supervised finetuning
+@article {
+    ouyang22,
+    title   = {Training language models to follow instructions with human feedback},
+    author  = {Ouyang, L. and Wu, J. and Jiang, X. and Almeida, D. and Wainwright, C. and Mishkin, P. and Zhang, C. and Agarwal, S. and Slama, K. and Ray, A. and Schulman, J. and Hilton, J. and Kelton, F. and Miller, L. and Simens, M. and Askell, A. and Welinder, P. and Christiano, P. and Leike, J. and Lowe, R.},
+    journal = {Advances in neural information processing systems},
+    volume  = {35},
+    pages   = {27730--27744},
+    year    = {2022}
+}
+
+
+% [[ Unread ]]
+% Transformer model architecture
+@article {
+    vaswani17,
+    title   = {Attention is all you need},
+    author  = {Vaswani, A. and Shazeer, N. and Parmar, N. and Uszkoreit, J. and Jones, L. and Gomez, A. N. and Kaiser, {\L}. and Polosukhin, I.},
+    journal = {Advances in neural information processing systems},
+    volume  = {30},
+    year    = {2017}
+}
+
+% [[ Unread ]]
+% Swin-UNET
+@inproceedings {
+    cao22,
+    title        = {{Swin-UNET: Unet-like pure transformer for medical image segmentation}},
+    author       = {Cao, H. and Wang, Y. and Chen, J. and Jiang, D. and Zhang, X. and Tian, Q. and Wang, M.},
+    booktitle    = {European conference on computer vision},
+    pages        = {205--218},
+    year         = {2022},
+    organization = {Springer}
+}
+
+% Deepseek
+%
+% Description: Discusses the DeepSeek model and shows benchmark
+% results. This text seem to have made DeepSeek model popular.  In
+% training the model combination of supervised finetuning and
+% direct preference optimization is explained. Talks about two
+% models 6B and 67B. Presents architectural parameters of these
+% model in Table 2 at page 5.
+%
+% tags: deepseek, SFT, DPO
+@misc {
+    bi24,
+    title         = {{DeepSeek LLM}: scaling open-source language models with longtermism},
+    author        = {Bi, X. and Chen, D. and Chen, G. and Chen, S. and Dai, D. and Deng, C. and Ding, H. and Dong, K. and Du, Q. and Fu, Z. and Gao, H. and Gao, K. and Gao, W. and Ge, R. and Guan, K. and Guo, D. and Guo, J. and Hao, G. and Hao, Z. and He, Y. and Hu, W. and Huang, P. and Li, E. and Li, G. and Li, J. and Li, Y. and Li, Y. K. and Liang, W. and Lin, F. and Liu, A. X. and Liu, B. and Liu, W. and Liu, X. and Liu, X. and Liu, Y. and Lu, H. and Lu, S. and Luo, F. and Ma, S. and Nie, X. and Pei, T. and Piao, Y. and Qiu, J. and Qu, H. and Ren, T. and Ren, Z. and Ruan, C. and Sha, Z. and Shao, Z. and Song, J. and Su, X. and Sun, J. and Sun, Y. and Tang, M. and Wang, B. and Wang, P. and Wang, S. and Wang, Y. and Wang, Y. and Wu, T. and Wu, Y. and Xie, X. and Xie, Z. and Xie, Z. and Xiong, Y. and Xu, H. and Xu, R. X. and Xu, Y. and Yang, D. and You, Y. and Yu, S. and Yu, X. and Zhang, B. and Zhang, H. and Zhang, L. and Zhang, L. and Zhang, M. and Zhang, M. and Zhang, W. and Zhang, Y. and Zhao, C. and Zhao, Y. and Zhou, S. and Zhou, S. and Zhu, Q. and Zou, Y.},
+    year          = {2024},
+    eprint        = {2401.02954},
+    archivePrefix = {{arXiv}},
+    primaryClass  = {{cs.CL}},
+    url           = {https://arxiv.org/abs/2401.02954}
+}
+
+% [[ Unread ]]
+% Direct preference optimization
+% tags: DPO, direct preference optimization
+@misc {
+    rafailov24,
+    title         = {Direct preference optimization: your language model is secretly a reward model},
+    author        = {Rafailov, R. and Sharma, A. and Mitchell, E. and Ermon, S. and Manning, C. D. and Finn, C.},
+    year          = {2024},
+    eprint        = {2305.18290},
+    archivePrefix = {{arXiv}},
+    primaryClass  = {{cs.LG}},
+    url           = {https://arxiv.org/abs/2305.18290}
+}
+
+% 14. Radiomics ---------------------------------------------------
+
+% Synopsis:
+% Defines radiomics as high-througput extraction of image features
+% from radiographic images and points to the possible benefit of
+% "extract[ing] more information from image-based features" using
+% the said +200 different features. Short brief introduction to the
+% topic.
+%
+% Tags: radiomics definition
+%
+@article {
+    lambin12,
+    title     = {Radiomics: extracting more information from medical images using advanced feature analysis},
+    author    = {Lambin, P. and Rios-Velazquez, E. and Leijenaar, R. and Carvalho, S. and Van Stiphout, R. G. P. M. and Granton, P. and Zegers, C. M. L. and Gillies, R. and Boellard, R. and Dekker, A. and Aerts, J. W. L.},
+    journal   = {European journal of cancer},
+    volume    = {48},
+    number    = {4},
+    pages     = {441--446},
+    year      = {2012},
+    publisher = {Elsevier}
+}
+
+% 15. Software and systems engineering ---------------------------
+
+@book {
+    bass22,
+    author       = {Bass, L. and Clements, P. and Kazman, R.},
+    title        = {Software architecture in practice},
+    publisher    = {{Addison-Wesley}},
+    year         = {2022}
+}
+
+@book {
+    borky19,
+    author       = {Borky, J. M. and Bradley, T. H.},
+    title        = {Effective model-based systems engineering},
+    publisher    = {Springer},
+    year         = {2019}
+}
+
+@book {
+    dick17,
+    author       = {Dick, J. and Hull, E. and Jackson, K.},
+    title        = {Requirements engineering},
+    publisher    = {Springer},
+    year         = {2017}
+}
+
+@book {
+    lauesen05,
+    author       = {Lauesen, S.},
+    title        = {User interface design: a software engineering perspective},
+    publisher    = {Addison-Wesley},
+    year         = {2005}
+}
+
+@book {
+    lattanze09,
+    author       = {Lattanze, A. J.},
+    title        = {Architecting software intensive systems: a practicioner's guide},
+    publisher    = {{CRC Press, New York}},
+    year         = {2009}
+}
+
+@book {
+    wiegers13,
+    author       = {Wiegers, K. and Beatty, J.},
+    title        = {Software requirements},
+    publisher    = {{Microsoft Press}},
+    year         = {2013}
+}
+
+@inproceedings {
+    petersen08,
+    title        = {Systematic mapping studies in software engineering},
+    author       = {Petersen, K. and Feldt, R. and Mujtaba, S. and Mattsson, M.},
+    booktitle    = {12th international conference on evaluation and assessment in software engineering ({EASE})},
+    year         = {2008},
+    organization = {{BCS Learning \& Development}}
+}
+
+% 16. Text mining -------------------------------------------------
+
+% Comprehensive literature review into information extraction (IE)
+% for beginners and seasoned researchers intrested topic.
+% Highlights are the brevity into the field, summary of related
+% works, clear explanation of the research method, IE from text
+% hierarcy diagram and table of practical applications of the
+% existing text-based IE techniques.
+@article {
+    abdullah23,
+    title     = {Systematic literature review of information extraction from textual data: recent methods, applications, trends, and challenges},
+    author    = {Abdullah, M. H. A. and Aziz, N. and Abdulkadir, S. J. and Alhassan, H. S. A. and Talpur, N.},
+    journal   = {{IEEE Access}},
+    volume    = {11},
+    pages     = {10535--10562},
+    year      = {2023},
+    publisher = {{IEEE}}
+}
+
+% Introduces two algorithms for clustering and classifying text
+% data named COATES and COLT, respectively, of which latter is a
+% supervised clustering extension of the former. Performs
+% experiments on the performance of these algorithms against common
+% clustering and classifying algorithms, such as Naive Bayes
+% Classifier and SVM. Takes Naive Bayes assumption w.r.t. posterior
+% probabilities of documents' beloning to clusters.
+@article {
+    aggarwal12a,
+    title     = {On the use of side information for mining text data},
+    author    = {Aggarwal, C. C. and Zhao, Y. and Philip, S. Y.},
+    journal   = {IEEE transactions on knowledge and data engineering},
+    volume    = {26},
+    number    = {6},
+    pages     = {1415--1429},
+    year      = {2012},
+    publisher = {{IEEE}}
+}
+
+% Comprehensive literature review into sentiment analysis into
+% hotel revies, methodologies, etc. Contains good tables for
+% different methods for text data feature data features
+% representations and classification approaches in conducting
+% sentiment analysis. Very thorough article with good references
+% into the topic.
+@article {
+    ameur23,
+    author     = {Ameur, A. and Hamdi, S. and Yahia, S. B.},
+    title      = {Sentiment analysis for hotel reviews: a systematic literature review},
+    year       = {2023},
+    issue_date = {{February 2024}},
+    publisher  = {{Association for Computing Machinery}},
+    address    = {{New York, NY, USA}},
+    volume     = {56},
+    number     = {2},
+    issn       = {0360-0300},
+    url        = {https://doi.org/10.1145/3605152},
+    doi        = {10.1145/3605152},
+    journal    = {{ACM Comput. Surv.}},
+    month      = {9},
+    articleno  = {51},
+    numpages   = {38},
+    keywords   = {hospitality industry, sentiment analysis, machine learning, text mining, hotel reviews}
+}
+
+
+% [[ Read ]]
+@article {
+    hassani20,
+    title     = {Text mining in big data analytics},
+    author    = {Hassani, H. and Beneki, C. and Unger, S. and Mazinani, M. T. and Yeganegi, M. R.},
+    journal   = {{Big Data and Cognitive Computing}},
+    volume    = {4},
+    number    = {1},
+    pages     = {1},
+    year      = {2020},
+    publisher = {{MDPI}},
+    doi       = {10.3390/bdcc4010001},
+    url       = {https://www.mdpi.com/2504-2289/4/1/1}
+}
+
+% [[ Read ]]
+@article {
+    kobayashi18,
+    title     = {Text mining in organizational research},
+    author    = {Kobayashi, V. B. and Mol, S. T. and Berkers, H. A. and Kismih{\'o}k, G. and den Hartog, D. N.},
+    journal   = {Organizational research methods},
+    volume    = {21},
+    number    = {3},
+    pages     = {733--765},
+    year      = {2018},
+    publisher = {{Sage Publications Sage CA: Los Angeles, CA}}
+}
+
+% [[ Read ]]
+@article {
+    myllyla25,
+    title     = {Extracting information from unstructured medical reports written in minority languages: {A} case study of finnish},
+    author    = {Myllyl{\"a}, E. and Siirtola, P. and Isosalo, A. and Reponen, J. and Tamminen, S. and Laatikainen, O.},
+    journal   = {Data},
+    volume    = {10},
+    number    = {7},
+    pages     = {104},
+    year      = {2025},
+    publisher = {{MDPI}}
+}
+
+% Synopsis: Introductory chapter to the book whose main
+% contribution is to briefly overview text processing algorithms
+% and future directions back in 2012.
+%
+% Tags: text mining algorithms
+@incollection {
+    aggarwal12,
+    title     = {An introduction to text mining},
+    author    = {Aggarwal, C. C. and Zhai, C. X.},
+    booktitle = {Mining text data},
+    pages     = {1--10},
+    year      = {2012},
+    publisher = {Springer}
+}
+
+% Synopsis: A look into various text processing algorithms and
+% accompanying methods in 2012.
+%
+% Tags: NER, relation extraction, unsupervised & supervised learning
+@incollection {
+    jiang12,
+    title     = {Information extraction from text},
+    author    = {Jiang, J.},
+    booktitle = {Mining text data},
+    pages     = {11--41},
+    year      = {2012},
+    publisher = {Springer},
+    editor    = {Aggarwal, C. C. and Zhai, C. X.}
+}
+
+% Literature review into text summarization techniques. Methods
+% discussed include, but are not limite to TF-IDF & other frequency
+% driven approaches, LSA, Bayesian topic models, etc.  One
+% interesting point was the fact that when related semantic text
+% units are modeled as graphs, and the outgoing connections between
+% words are normalized to 1, the word inter-relation connections
+% become Markov chains.
+%
+% Tags: LSA, TF-IDF, Bayesion topic models, Markov chain
+@incollection {
+    nenkova12,
+    title     = {A survey of text summarization techniques},
+    author    = {Nenkova, A. and McKeown, K.},
+    booktitle = {Mining text data},
+    pages     = {43--76},
+    year      = {2012},
+    publisher = {Springer},
+    editor    = {Aggarwal, C. C. and Zhai, C. X.}
+}
