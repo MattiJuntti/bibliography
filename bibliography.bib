@@ -16,47 +16,51 @@
 %       a. articles:
 %           essien25, hulme18, stede23, tian26, tomassi25
 %
-%    3. Custom LLMs
+%    3. Clustering
+%       a. articles:
+            murtagh12
+%
+%    4. Custom LLMs
 %       a. articles:
 %           singhal25
 %       b. misc:
 %           wu23
 %
-%    4. Data science
+%    5. Data science
 %       a. books:
 %           mariani22
 %
-%    5. Design science and design science research
+%    6. Design science and design science research
 %       a. books:
 %           johannesson14
 %
-%    6. Digital image processing
+%    7. Digital image processing
 %       a. articles:
 %           duda72
 %
-%    7. GPU programming
+%    8. GPU programming
 %       a. articles:
 %           kruger03
 %
-%    8. High-performance and parallel computing
+%    9. High-performance and parallel computing
 %       a. books:
 %           barlas15, panda22
 %
-%    9. Interaction design
+%   10. Interaction design
 %       a. articles:
 %           upton08
 %
-%   10. Knee articular cartilage segmentation
+%   11. Knee articular cartilage segmentation
 %       a. articles:
 %           deniz18
 % 
-%   11. LLM heuristics
+%   12. LLM heuristics
 %
-%   12. Literature review methods
+%   13. Literature review methods
 %       a. articles:
 %           torraco05, torraco16, snyder19
 %
-%   13. Popular LLM architectures and LLMing
+%   14. Popular LLM architectures and LLMing
 %       a. articles:
 %           ouyang22, vaswani17
 %       b. inproceedings
@@ -64,17 +68,17 @@
 %       c. misc
 %           bi24, rafailov24
 %
-%   14. Radiomics
+%   15. Radiomics
 %       articles:
 %           lambin12
 %
-%   15. Software and systems engineering
+%   16. Software and systems engineering
 %       articles:
 %           petersen08
 %       books:
 %           bass22, borky19, dick17, lauesen05, lattanze09, wiegers13
 %
-%   16. Text mining
+%   17. Text mining
 %       articles:
 %           abdullah23, aggarwal12a, hassani20, kobayashi18, myllyla25
 %       incollections:
@@ -281,7 +285,31 @@
     publisher = {{MDPI}}
 }
 
-% 3. Custom LLMs -------------------------------------------------
+% 3. Clustering --------------------------------------------------
+
+% General overview on hiearchical clustering and some related algorithms which
+% seek to partitions a given data into hiearchical subsets either from totally
+% partitioned sets of elements up until the elements as a single set, or vice
+% versa. Agglomerated hierarchical cluster is a set partition where partition
+% boundaries (elements on a line), or equivalently non-terminating roots of a
+% tree-like hierarchy (bifurcation points in a dendrogram) represent a decision
+% treshold that guides where set extraneous objects are to categorized into.
+%
+% tags: agglomerative hierarchical clustering algorithm
+%
+@article {
+    murtagh12,
+    title     = {Algorithms for hierarchical clustering: an overview},
+    author    = {Murtagh, F. and Contreras, P.},
+    journal   = {Wiley interdisciplinary reviews: data mining and knowledge discovery},
+    volume    = {2},
+    number    = {1},
+    pages     = {86--97},
+    year      = {2012},
+    publisher = {{Wiley Online Library}}
+}
+
+% 4. Custom LLMs -------------------------------------------------
 
 % [[ Unread ]]
 @article {
@@ -308,7 +336,7 @@
     url           = {https://arxiv.org/abs/2303.17564}
 }
 
-% 4. Data science ---------------------------------------------------
+% 5. Data science ---------------------------------------------------
 
 @book {
     mariani22,
@@ -318,7 +346,7 @@
     year         = {2022}
 }
 
-% 5. Design science and design science research----------------------
+% 6. Design science and design science research----------------------
 
 @book {
     johannesson14,
@@ -328,7 +356,7 @@
     year         = {2015}
 }
 
-% 6. Digital image processing ---------------------------------------
+% 7. Digital image processing ---------------------------------------
 
 % Hough transform
 %
@@ -350,7 +378,7 @@
     publisher    = {{ACM New York, NY, USA}}
 }
 
-% 7. GPU programming ---------------------------------------------
+% 8. GPU programming ---------------------------------------------
 
 % Overview from 2003 for using GPUs to do numerical linear algebra
 % that discusses the topic in a very wholesome manner, such as
@@ -368,7 +396,7 @@
     year   	     = {2003}
 }
 
-% 8. High-performance and parallel computing ---------------------
+% 9. High-performance and parallel computing ---------------------
 
 @book {
     barlas15,
@@ -386,7 +414,7 @@
     publisher = {{MIT Press}}
 }
 
-% 9. Interaction design ------------------------------------------
+% 10. Interaction design ------------------------------------------
 
 % Tags: ecological interdace design, EID, information requirements, abstraction decomposition space
 %
@@ -409,7 +437,7 @@
     publisher = {Elsevier}
 }
 
-% 10. Knee articular cartilage segmentation -----------------------
+% 11. Knee articular cartilage segmentation -----------------------
 %
 % Tags: U-Net, 2-D CNN, 3-D CNN, DSC, recall, specificity, precision, ASD, MSD
 % Study on application of U-Net to automatic knee cartilage
@@ -431,7 +459,7 @@
 }
 
 
-% 11. LLM Heuristics ---------------------------------------------
+% 12. LLM Heuristics ---------------------------------------------
 
 @misc {
     raschka20,
@@ -444,7 +472,7 @@
     url           = {https://arxiv.org/abs/1811.12808}
 }
 
-% 12. Literature review methods -----------------------------------
+% 13. Literature review methods -----------------------------------
 
 % [[ Read ]]
 @article {
@@ -484,7 +512,7 @@
     publisher = {{Sage Publications Sage CA: Los Angeles, CA}}
 }
 
-% 13. Popular LLM architectures and LLMing ------------------------
+% 14. Popular LLM architectures and LLMing ------------------------
 
 % [[ Unread ]]
 % Supervised finetuning
@@ -558,7 +586,7 @@
     url           = {https://arxiv.org/abs/2305.18290}
 }
 
-% 14. Radiomics ---------------------------------------------------
+% 15. Radiomics ---------------------------------------------------
 
 % Synopsis:
 % Defines radiomics as high-througput extraction of image features
@@ -581,7 +609,7 @@
     publisher = {Elsevier}
 }
 
-% 15. Software and systems engineering ---------------------------
+% 16. Software and systems engineering ---------------------------
 
 @book {
     bass22,
@@ -640,7 +668,7 @@
     organization = {{BCS Learning \& Development}}
 }
 
-% 16. Text mining -------------------------------------------------
+% 17. Text mining -------------------------------------------------
 
 % Comprehensive literature review into information extraction (IE)
 % for beginners and seasoned researchers intrested topic.
